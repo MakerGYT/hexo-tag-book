@@ -17,13 +17,14 @@ const getBook = async (id) => {
       method: 'get',
     });
 }
+
 hexo.extend.tag.register('dbook', (args) => {
   let tpl;
   
   return getBook(args[0]).then((res) => {
 
     if (200 === res.status) {
-      let { title,alt,image,publisher,pubdate,author,translator,price,rating,summary,isbn13 } = res.data.data;
+      let { title,alt,image,publisher,pubdate,author,translator,price,rating,summary,isbn13 } = res.data;
       tpl = [
         '<a title="'+ summary +'" href="' + alt + '" target="_blank" style="color: #666;display:block;">',
           '<img src="' + image + '" alt="' + title + '" style="width: 135px; height: 192px; display:inline-block; margin-right: 14px;"  referrerpolicy="no-referrer" />',
