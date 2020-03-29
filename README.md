@@ -30,6 +30,12 @@ npm i hexo-tag-book-douban --save
 # Hexo/source/_posts/xxx.md
 {% dbook [id] %}
 ```
+## Example:
+[demo](http://localhost:4000/about/#%E6%9C%80%E8%BF%91%E5%9C%A8%E8%AF%BB)
+```sh
+{% dbook 4913064 %}
+```
+![]()
 ## Development
 ```sh
 git clone https://github.com/MakerGYT/hexo-tag-book-douban.git
