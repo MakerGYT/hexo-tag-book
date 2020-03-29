@@ -51,6 +51,7 @@ If you have any questions, please contact me at the following contact informatio
 
 ## Todo
 - [ ] Support for custom styles and templates
+- [ ] Response type
 
 ## License
 MIT License

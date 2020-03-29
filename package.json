@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-book-douban",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tag to display the information of Douban books in hexo post/page",
   "main": "index.js",
   "repository": {
