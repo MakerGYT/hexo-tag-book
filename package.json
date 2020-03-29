@@ -1,0 +1,21 @@
+{
+  "name": "hexo-tag-book-douban",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakerGYT/hexo-tag-book-douban.git"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-tag",
+    "douban",
+    "hexo-tag-book"
+  ],
+  "author": "MakerGYT",
+  "license": "MIT",
+  "homepage": "https://github.com/MakerGYT/hexo-tag-book-douban#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
