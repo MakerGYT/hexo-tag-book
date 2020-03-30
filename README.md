@@ -4,25 +4,12 @@
 ![license](https://badgen.net/github/license/makergyt/hexo-tag-book-douban)
 ![last-commit](https://badgen.net/github/last-commit/makergyt/hexo-tag-book-douban)
 
+[![NPM](https://nodei.co/npm/hexo-tag-book-douban.png)](https://nodei.co/npm/hexo-tag-book-douban/)
+
 A tag to display the information of Douban books in hexo post/page.
 
 ## Feature
 - Rendering book information according to book ID
-  - id,
-  - title
-  - alt
-  - image
-  - publisher
-  - pubdate
-  - author
-  - translator
-  - price
-  - rating
-  - summary
-
-## Dependencies
-- [axios](https://github.com/axios/axios) => GET book data
-- [Douban API Proxy](https://douban.uieee.com/) => A proxy service of Douban API
 
 ## Install
 ```sh
@@ -30,10 +17,25 @@ npm i hexo-tag-book-douban --save
 # Hexo/source/_posts/xxx.md
 {% dbook [id] %}
 ```
-## Example:
+The default config:
+```yml
+dbook:
+  enable: true # Recommended to set it to false during `hexo server` and open during `hexo generate` to reduce requests.
+  proxy: https://douban.uieee.com # Current limit that everyone shares : 10000 times / 1 hour
+  powered: true  
+```
+
+The `{% dbook %}` options are shown below:
+| Option| Default                  | Description                                                  |
+| ----- | ------------------------ | ------------------------------------------------------------ |
+| ISBN  | **required**             | New version of ISBN, consisting of 13 pure numbers without`-`|
+| width | 60%                      | |
+
+
+## Sample:
 [demo](https://blog.makergyt.com/about/#%E6%9C%80%E8%BF%91%E5%9C%A8%E8%AF%BB)
 ```sh
-{% dbook 4913064 %}
+{% dbook 4913064 '50%' %}
 ```
 ![](https://imgkr.cn-bj.ufileos.com/342d1d01-aa88-4054-8ee6-37fccac84de5.png)
 ## Development
@@ -41,6 +43,11 @@ npm i hexo-tag-book-douban --save
 git clone https://github.com/MakerGYT/hexo-tag-book-douban.git
 ```
 If secondary development, please fork.
+## Dependencies
+- [axios](https://github.com/axios/axios) => GET book data
+- [ejs](https://github.com/mde/ejs) => render template
+- [Douban API Proxy](https://douban.uieee.com/) => A proxy service of Douban API
+
 ## Bug
 If there is a bug, please feedback through [issues](https://github.com/MakerGYT/hexo-tag-book-douban/issues)
 

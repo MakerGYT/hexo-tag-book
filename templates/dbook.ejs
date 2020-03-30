@@ -1,0 +1,59 @@
+<style>
+  .hexo-tag-book-douban {
+    position:relative;
+    width:<%= width %>;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px #ccc;
+    margin:10px auto;
+    padding:0;
+  }
+  @media screen and (max-width: 600px) {
+    .hexo-tag-book-douban {
+      width: 100%;
+    }
+  }
+  .hexo-tag-book-douban a {
+    color: #666;
+    display:block;
+  }
+  .hexo-tag-book-douban-cover {
+    width: 90px; 
+    min-height: 140px;
+    display:inline-block; 
+    margin-right: 14px;
+    margin-bottom: 0;
+  }
+  .hexo-tag-book-douban p {
+    margin:0; font-size: 14px;
+  }
+  .hexo-tag-book-douban-info {
+    display:inline-block; vertical-align: top;
+  }
+  .hexo-tag-book-douban-title {
+    margin:0; font-size: 16px; font-weight: bold;
+  }
+  .hexo-tag-book-douban-powered svg {
+    width: 24px;height: 24px;position: absolute;right: 0px;bottom: 0px;
+  }
+</style>
+
+<div class="hexo-tag-book-douban">
+  <a title="<%= summary %>" href="<%= alt %>" target="_blank">
+    <img class="hexo-tag-book-douban-cover" src="<%= image %>" alt="<%= title %>" referrerpolicy="no-referrer" />
+    <div class="hexo-tag-book-douban-info">
+      <p><span class="hexo-tag-book-douban-title"><%= title %></span> (<%= rating.average %>分)<p>
+      <p><%= author %> 著.<% if (translator.length) { %> <%= translator.join(',') %> 译. <% } %></p>
+      <p>出版社:<%= publisher %></p>
+      <p>出版日期:<%= pubdate %></p>
+      <p>定 价:<%= price %></p>
+      <p>ISBN :<%= isbn13 %></p>
+    </div>
+  </a>
+  <% if (powered) { %>
+  <div class="hexo-tag-book-douban-powered">
+    <a href="https://github.com/MakerGYT/hexo-tag-book-douban">
+      <svg t="1585573409017" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1050" width="32" height="32"><path d="M1024 0l-471.04 471.04 0 61.44-110.592 49.152-442.368 442.368L1024 1024z" fill="#2c2c2c" p-id="1051"></path><path d="M623.74348224 957.39098922c-95.98421333 23.99605333-111.98158222-39.99342223-111.98158224-39.99342223-15.99736889-39.99342223-35.99408001-51.99144889-35.99408-51.99144888-31.99473778-23.99605333 3.99934223-19.99671111 3.99934223-19.99671111 35.99408001 3.99934223 51.99144889 35.99408001 51.99144889 35.99407998 27.99539555 51.99144889 79.98684444 39.99342223 99.98355555 27.99539557" fill="#ffffff" p-id="1052"></path><path d="M595.74808668 1033.37849144s23.99605333-7.99868445 19.99671109-19.99671111l0-111.98158223c3.99934223-19.99671111 11.99802668-35.99408001 19.99671112-43.99276443-75.98750222-11.99802668-155.97434668-35.99408001-155.97434666-171.97171556 0-39.99342223 11.99802668-67.98881777 35.99407998-91.98487111-3.99934223-11.99802668-15.99736889-39.99342223 3.99934223-91.98487111 0 0 31.99473778-7.99868445 91.98487111 35.99408001 23.99605333-7.99868445 51.99144889-11.99802668 83.98618668-11.99802668s59.99013335 3.99934223 83.98618665 11.99802668c67.98881777-43.99276445 95.98421333-39.99342223 95.98421335-39.99342224 15.99736889 47.99210667 7.99868445 79.98684444 0 87.98552891 23.99605333 23.99605333 35.99408001 51.99144889 35.99407999 91.9848711 0 127.9789511-79.98684444 159.97368889-155.97434668 171.97171556 11.99802668 11.99802668 23.99605333 31.99473778 23.99605334 63.98947556l-3.99934223 91.9848711c0 7.99868445 23.99605333 15.99736889 23.99605334 15.99736887z" fill="#ffffff" p-id="1053"></path></svg>
+    </a>
+  </div>
+  <% } %>
+</div>
