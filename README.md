@@ -15,7 +15,7 @@ A tag to display the information of Douban books in hexo post/page.
 ```sh
 npm i hexo-tag-book-douban --save
 # Hexo/source/_posts/xxx.md
-{% dbook [id] %}
+{% dbook [id] [width] %}
 ```
 The default config:
 ```yml
@@ -29,7 +29,7 @@ The `{% dbook %}` options are shown below:
 | Option| Default                  | Description                                                  |
 | ----- | ------------------------ | ------------------------------------------------------------ |
 | ISBN  | **required**             | New version of ISBN, consisting of 13 pure numbers without`-`|
-| width | 60%                      | |
+| width | 60%                      | Double quotes                                                |
 
 
 ## Sample:
