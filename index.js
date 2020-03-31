@@ -4,7 +4,7 @@
 * Copyright (c) 2020, MakerGYT
 * Licensed under the MIT license.
 * Syntax:
-* {% dbook [id] %}
+* {% dbook [ISBN] [width] %}
 */
 
 hexo.config.dbook = Object.assign({
@@ -51,11 +51,11 @@ const renderBook = async(ISBN, width) => {
 
 hexo.extend.tag.register('dbook', (args) => {
   if (!dbookCfg.enable) {
-    log.info('dbook support is disabled, cannot resolve the dbook tags properly.');
+    log.info('[hexo-tag-book-douban]=>dbook support is disabled, cannot resolve the dbook tags properly.');
     return ;
   }
   let ISBN = parseInt(args[0]);
-  let width = args[1]? args[1]: '60%';
+  let width = args[1];
   return renderBook(ISBN, width).then((res) => {
     return res;
   });
